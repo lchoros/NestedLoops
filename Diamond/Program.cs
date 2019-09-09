@@ -10,7 +10,7 @@ namespace Diamond
             int left = (n - 1)/ 2;
             int right = n / 2 ;
 
-            for (int row = 0; row < (n - 1) / 2; row++)
+            for (int row = 0; row < Math.Ceiling(n / 2f); row++)
             {
                 for (int col = 0; col < n; col++)
                 {
@@ -27,14 +27,7 @@ namespace Diamond
                 right++;
                 Console.WriteLine();
             }
-            Console.Write("*");
-            if(n > 1)
-            {
-                Console.Write(new string('-', n - 2));
-                Console.Write("*");
-            }
 
-            Console.WriteLine();
             left = 1;
             right = n - 2;
             for (int row = 0; row < (n - 1) / 2; row++)
